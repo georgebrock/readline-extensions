@@ -2,8 +2,6 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
-#include <stdio.h>
-
 VALUE Readline = Qnil;
 VALUE ReadlineExtensions = Qnil;
 static ID quoting_detection_proc;
