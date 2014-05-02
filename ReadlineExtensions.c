@@ -2,7 +2,6 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 
-VALUE Readline = Qnil;
 VALUE ReadlineExtensions = Qnil;
 static ID quoting_detection_proc;
 
@@ -14,7 +13,6 @@ VALUE readlineextensions_s_quoting_detection_proc(VALUE self);
 void Init_readlineextensions() {
     quoting_detection_proc = rb_intern("quoting_detection_proc");
 
-    Readline = rb_const_get(rb_cObject, rb_intern("Readline"));
     ReadlineExtensions = rb_define_module("ReadlineExtensions");
     rb_define_singleton_method(ReadlineExtensions, "quoting_detection_proc=",
             readlineextensions_s_set_quoting_detection_proc, 1);
