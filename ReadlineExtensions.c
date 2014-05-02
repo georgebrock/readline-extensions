@@ -3,7 +3,7 @@
 #include <readline/history.h>
 
 VALUE ReadlineExtensions = Qnil;
-static ID quoting_detection_proc;
+static ID quoting_detection_proc = Qnil;
 
 void Init_readlineextensions();
 int readline_char_is_quoted_p(char *text, int index);
